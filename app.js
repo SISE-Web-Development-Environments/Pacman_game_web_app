@@ -13,7 +13,7 @@ $(document).ready(function() {
 });
 
 function Start() {
-	board = new Array(); //try
+	board = new Array(); //try2
 	score = 0;
 	pac_color = "yellow";
 	var cnt = 100;
