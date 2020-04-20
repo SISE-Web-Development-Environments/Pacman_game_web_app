@@ -9,11 +9,11 @@ var interval;
 
 $(document).ready(function() {
 	context = canvas.getContext("2d");
-	Start();
+	Start(); 
 });
 
 function Start() {
-	board = new Array();
+	board = new Array(); //try
 	score = 0;
 	pac_color = "yellow";
 	var cnt = 100;
