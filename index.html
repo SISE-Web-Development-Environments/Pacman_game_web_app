@@ -5,6 +5,37 @@
 		<script type="text/javascript" src="./app.js"></script>
 		<Title>Yarin's & Dana's PACMAN GAME</Title>
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
+		<style>
+			* {box-sizing: border-box}
+
+			/* Style tab links */
+			.tablink {
+			  background-color: #555;
+			  color: rgb(0, 0, 0);
+			  float: left;
+			  border: none;
+			  outline: none;
+			  cursor: pointer;
+			  padding: 14px 16px;
+			  font-size: 17px;
+			  width: 10%;
+			}
+			
+			.tablink:hover {
+			  background-color: #777;
+			}
+			
+			/* Style the tab content (and add height:100% for full page content) */
+			.tabcontent {
+			  color: rgb(0, 0, 0);
+			  display: none;
+			  padding: 100px 20px;
+			  height: 500px;
+			}
+
+			</style>
 	</head>
 
 <body>
@@ -22,33 +53,70 @@
 		<div id="menu" style="overflow:auto;">
 			<nav>	
 				<ul style="font-size: 4mm;">
-				  <li class='active'><a href='#Welcome'><b>Welcome</b></a></li>
-				  <li><a href='#Register'><b>Register</b></a></li>
-				  <li><a href='#Login'><b>Login</b></a></li>
-				  <li><a href='#About'><b>About</b></a></li>
+				  <li onclick="openPage('Welcome', this, 'yellow')" id="defaultOpen"><a href='#Welcome'><b>Welcome</b></a></li>
+				  <li onclick="openPage('Register', this, 'green')"><a href='#Register' ><b>Register</b></a></li>
+				  <li onclick="openPage('Login', this, 'blue')"><a href='#Login'><b>Login</b></a></li>
+				  <li onclick="openPage('About', this, 'orange')"><a href='#About'><b>About</b></a></li>
+				  <li onclick="openPage('Game', this, 'orange')"><a href='#Game'><b>Game</b></a></li>
 				</ul>
+
+				<div id="Welcome" class="tabcontent">
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+				  <h3>Welcome</h3>
+				
+				</div>
+				
+				<div id="Register" class="tabcontent">
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+				  <h3>Register</h3>
+				  <p>cccc</p>
+
+				</div>
+				
+				<div id="Login" class="tabcontent">
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+				  <h3>Login</h3>
+				</div>
+
+				<div id="About" class="tabcontent">
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<h3>About</h3>
+				  </div>
+
+				  <div id="Game" class="tabcontent" style="height: 700px;">
+					<h3>Game</h3>
+  				<!----- game body ----->
+				
+				 <br/>
+			 	 <br/>
+			 	  SCORE:
+			 	 <input id="lblScore" type="text" />
+			 	 <br/>
+			 	 <br/>
+				  TIME:
+			  	<input id="lblTime" type="text" />
+			  	<br/>
+			  	<canvas id="canvas" height="500" width="500" class="canvas" ></canvas>
+	  
+				  </div>
 			</nav>
 			</div>
+		
 
 
-		<!----- game body ----->
-	   	<section style="overflow:auto;">
-		<article style="height: 700px;"  >
-			  <br/>
-			  <br/>
-	 		  SCORE:
-			  <input id="lblScore" type="text" />
-			  <br/>
-			  <br/>
-			  TIME:
-			  <input id="lblTime" type="text" />
-			  <br/>
-			  <canvas id="canvas" height="500" width="500" class="canvas" ></canvas>
-			  
-			  
-	  
-		</article>
-		</section>
+	
 	  
 		<!----- footer ----->
 		<footer>
@@ -56,6 +124,26 @@
 		<div><a href="mailto:yarinbo@post.bgu.ac.il?subject=Pacman">yarinbo@post.bgu.ac.il</a>&nbsp;</div>
 		</footer>
    
+
+		<script>
+			function openPage(pageName,elmnt,color) {
+			  var i, tabcontent, tablinks;
+			  tabcontent = document.getElementsByClassName("tabcontent");
+			  for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			  }
+			  tablinks = document.getElementsByClassName("tablink");
+			  for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].style.backgroundColor = "";
+			  }
+			  document.getElementById(pageName).style.display = "block";
+			  elmnt.style.backgroundColor = color;
+			}
+			
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+			</script>
+
 </body>
 
 </html>
