@@ -32,6 +32,7 @@ body {
   height: 500px;
   display: none;
   padding: 100px 20px;
+  text-align: center;
 }
 
     /* menu */
@@ -86,4 +87,9 @@ canvas {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  }
+  #defaultOpen{ 
+      float: left;
+      background-color: rgb(242, 255, 55);
+  
   }
