@@ -3,20 +3,59 @@
 	<head>
 		<script src="./jquery-3.4.1.slim.min.js"></script>
 		<script type="text/javascript" src="./app.js"></script>
+		<Title>Yarin's & Dana's PACMAN GAME</Title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
 
-	<body>
-		<!-- dana -->
-		<div id="score">
-			<label for="lblScore">SCORE:</label>
-			<input id="lblScore" type="text" />
+<body>
+		<!----- header ----->
+ 		<div class="header" >
+		<a href="#default" > <img src="images/205.jpg" width="500px" height="100px" /> </a>
+		<div class="header-right" style="color: rgb(255, 255, 255);">
+		  Yarin Hayun
+		  <br/>
+			Dana Sror  
 		</div>
-		<div id="time">
-			<label for="lblTime">TIME:</label>
-			<input id="lblTime" type="text" />
-		</div>
-		<div id="game">
-			<canvas id="canvas" height="600" width="600"></canvas>
-		</div>
-	</body>
+	    </div>
+
+		<!----- menu ----->
+		<div id="menu" style="overflow:auto;">
+			<nav>	
+				<ul style="font-size: 4mm;">
+				  <li class='active'><a href='#Welcome'><b>Welcome</b></a></li>
+				  <li><a href='#Register'><b>Register</b></a></li>
+				  <li><a href='#Login'><b>Login</b></a></li>
+				  <li><a href='#About'><b>About</b></a></li>
+				</ul>
+			</nav>
+			</div>
+
+
+		<!----- game body ----->
+	   	<section style="overflow:auto;">
+		<article style="height: 700px;"  >
+			  <br/>
+			  <br/>
+	 		  SCORE:
+			  <input id="lblScore" type="text" />
+			  <br/>
+			  <br/>
+			  TIME:
+			  <input id="lblTime" type="text" />
+			  <br/>
+			  <canvas id="canvas" height="500" width="500" class="canvas" ></canvas>
+			  
+			  
+	  
+		</article>
+		</section>
+	  
+		<!----- footer ----->
+		<footer>
+			<div >© 2020 Dana Sror & Yarin Hayun ©&nbsp;<br><a href="mailto:danayevd@post.bgu.ac.il?subject=Pacman">danayevd@post.bgu.ac.il  </a>&nbsp;</div>
+		<div><a href="mailto:yarinbo@post.bgu.ac.il?subject=Pacman">yarinbo@post.bgu.ac.il</a>&nbsp;</div>
+		</footer>
+   
+</body>
+
 </html>
