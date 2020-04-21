@@ -4,38 +4,7 @@
 		<script src="./jquery-3.4.1.slim.min.js"></script>
 		<script type="text/javascript" src="./app.js"></script>
 		<Title>Yarin's & Dana's PACMAN GAME</Title>
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-
-
-		<style>
-			* {box-sizing: border-box}
-
-			/* Style tab links */
-			.tablink {
-			  background-color: #555;
-			  color: rgb(0, 0, 0);
-			  float: left;
-			  border: none;
-			  outline: none;
-			  cursor: pointer;
-			  padding: 14px 16px;
-			  font-size: 17px;
-			  width: 10%;
-			}
-			
-			.tablink:hover {
-			  background-color: #777;
-			}
-			
-			/* Style the tab content (and add height:100% for full page content) */
-			.tabcontent {
-			  color: rgb(0, 0, 0);
-			  display: none;
-			  padding: 100px 20px;
-			  height: 500px;
-			}
-
-			</style>
+		<link rel="stylesheet" type="text/css" href="Style.css" />
 	</head>
 
 <body>
@@ -50,7 +19,7 @@
 	    </div>
 
 		<!----- menu ----->
-		<div id="menu" style="overflow:auto;">
+		<div id="menu" style="overflow:auto;" >
 			<nav>	
 				<ul style="font-size: 4mm;">
 				  <li onclick="openPage('Welcome', this, 'yellow')" id="defaultOpen"><a href='#Welcome'><b>Welcome</b></a></li>
@@ -60,7 +29,7 @@
 				  <li onclick="openPage('Game', this, 'orange')"><a href='#Game'><b>Game</b></a></li>
 				</ul>
 
-				<div id="Welcome" class="tabcontent">
+				<div id="Welcome" class="tabcontent" >
 					<br/>
 					<br/>
 					<br/>
@@ -69,7 +38,7 @@
 				
 				</div>
 				
-				<div id="Register" class="tabcontent">
+				<div id="Register" class="tabcontent" >
 					<br/>
 					<br/>
 					<br/>
@@ -79,7 +48,7 @@
 
 				</div>
 				
-				<div id="Login" class="tabcontent">
+				<div id="Login" class="tabcontent" >
 					<br/>
 					<br/>
 					<br/>
@@ -87,7 +56,7 @@
 				  <h3>Login</h3>
 				</div>
 
-				<div id="About" class="tabcontent">
+				<div id="About" class="tabcontent" >
 					<br/>
 					<br/>
 					<br/>
@@ -95,7 +64,7 @@
 					<h3>About</h3>
 				  </div>
 
-				  <div id="Game" class="tabcontent" style="height: 700px;">
+				  <div id="Game" class="tabcontent" style="height: 500px;">
 					<h3>Game</h3>
   				<!----- game body ----->
 				
