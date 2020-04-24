@@ -1,155 +1,300 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script src="./jquery-3.4.1.slim.min.js"></script>
-		<script type="text/javascript" src="./app.js"></script>
-		<Title>Yarin's & Dana's PACMAN GAME</Title>
-		<link rel="stylesheet" type="text/css" href="Style.css" />
-	</head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body onload="PageLoaded()">
-		<!----- header ----->
- 		<div class="header" >
-		<a href="#default" > <img src="images/205.jpg" width="500px" height="100px" /> </a>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/main.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <Title>Yarin's & Dana's PACMAN GAME</Title>
+</head>
+
+<body>
+<!----- header ----->
+    <div class="header" >
+		<a > <img src="images/205.jpg" width="500px" height="100px" /> </a>
 		<div class="header-right" style="color: rgb(255, 255, 255);">
-		  Yarin Hayun
-		  <br/>
-			Dana Sror  
+            <h3 style="color: azure;">presenters :</h3>
+            <p style="color: azure;">Yarin Hayun, Dana Sror</p> 
 		</div>
-	    </div>
-		<!----- menu ----->
-		<div id="menu" style="overflow:auto;" >
-			<nav>	
-				<ul style="font-size: 4mm;">
-				  <li onclick="openPage('Welcome', this)" id="defaultOpen"><a href='#Welcome'><b>Welcome</b></a></li>
-				  <li onclick="openPage('Register', this)" id=registerID><a href='#Register'><b>Register</b></a></li>
-				  <li onclick="openPage('Login', this)"><a href='#Login'><b>Login</b></a></li>
-				  <li onclick="openPage('About', this)"><a href='#About'><b>About</b></a></li>
-				  <li onclick="openPage('Game', this)"><a href='#Game'><b>Game</b></a></li>
-				</ul>
+	</div>
 
-				<div id="Welcome" class="tabcontent" >
-					<br/>
-					<br/>
-					<br/>
-					<br/>
-				  <h3>Welcome</h3>
-				
+<!----- menu ----->
+    <nav id="menu" style="overflow:auto;">	
+        <ul >
+            <li><a id="welcomeClick"  href="#" data-option="welcome"  onclick="clickPage(this)">Welcome</a> </li>
+            <li><a  href="#" data-option="register" onclick="clickPage(this)">Register</a> </li>
+            <li><a  href="#" data-option="login" onclick="clickPage(this)">Login</a></li>
+            <li><a id="aboutButton" onclick="document.getElementById('id01').style.display='block'" class="aboutNav" href="#" data-option="about">About</a></li>
+        </ul>
+    </nav>
+
+<!----- main body ----->
+<div id="main" >
+    <!--------------- welcome section ---------------->
+    <section id="welcomeSection" class="activeSection" >
+        <br/>
+        <br/>
+        <br/>
+        <h1 style="font-size: 15mm;text-align: center;color: rgb(255, 255, 255);">Welcome</h1>
+        <img id="logo" src="images/pac.jpg">
+        <div id="welcomeButtons">
+            <button onclick="openPage('login')" class="button button2"><span>Login </span>
+            </button>
+            <button onclick="openPage('register')" class="button button2" ><span>Register </span>
+            </button>
+        </div>
+    </section>
+
+    <!------------ Registration section ------------->
+    <section id="registerSection" class="registrationForm">
+        <br/>
+        <br/>
+        <br/>
+        <div id="Register" class="registrationForm">
+        <h3 style="font-size: 10mm;">Sign Up</h3>
+			<form  id="registrationForm" role="form"  action="" class="registrationForm">
+			  <p>
+				  <label>user name *</label>
+				  <input id="userNameR" type="text" name="username"  pattern="^[a-zA-Z]*$"  required="required" />
+			  </p>
+			  <p>
+				  <label>password *</label>
+				  <input id="passwordR" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required="required" />
+			  </p>   
+			  <p>
+				  <label>first name *</label>
+				  <input id="firstNameR" type="text" name="firstName"  pattern="^[a-zA-Z]*$" required="required"/>
+			  </p> 
+			  <p>
+				  <label>last name *</label>
+				  <input id="lastNameR" type="text" name="lastName" pattern="^[a-zA-Z]*$" required="required"/>
+			  </p> 
+			  <p>
+				  <label>email *</label>
+				  <input id="emailR" type="email" name="email" required="required" />
+			  </p>
+			  <p>
+				  <label>birthday</label>
+				  <input id="birthdayR" type="date" id="birthday" name="birthday" required="required"/>
+              </p>
+              <p>
+                <input id="registerSubmitButton"  type="submit" value="Submit" class="button button2">
+              </p>
+			</form>
+        </div>
+        <br/>
+        <br/>
+    </section>
+
+    <!--------------- Login section ----------------->
+    <section id="loginSection">
+        <div class="container">
+            <div class="form-group">
+                <div class="page-header">
+                    <p class="lead text-center">
+                        <i class="glyphicon glyphicon-log-in"></i> Welcome To Account Login Panel
+                    </p>
+                </div>
+                <form id="loginForm" class="form-horizontal col-xs-4 col-xs-offset-4" role="form" method="post"
+                      action="">
+                    <label for="loginUserName">User Name</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </div>
+                        <input class="form-control" id="loginUserName" placeholder="User Name" type="text"
+                               name="loginUserName" required="true";>
+                    </div>
+                    <label for="loginPassword">Password</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="glyphicon glyphicon-lock"></i>
+                        </div>
+                        <input class="form-control" id="loginPassword" placeholder="Password" type="password"
+                               name="loginPassword" required="true";>
+                    </div>
+                    <div class="form-row">
+                        <input id="login-submit-button" class="form-control btn btn-primary" type="submit"
+							   value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--------------- About section ----------------->
+    <section id="myModal" class="modal" >
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <u><b>Presenters names :</b> </u>
+            <p><b>Yarin Hayun , Dana sror</b></p>
+            <br>
+            <p><u><b>jQury and Template uses :</b></u> 
+                We use Jquery 3.4.0 for the validation of fields.</p>
+            <p><u><b>Difficulties :</b></u> 
+                We had difficult to switch between the different pages but 
+            finally we overcome the problem via transition function we wrote.</p>
+        </div>
+    </section>
+
+    <!------------ Pre game setting section ------------->
+    <section id="preGameSection">
+		<div id="Settings" class="tabcontent" >
+			<form id="settingsForm">
+				<label for="ballsNum">Number of balls</label>
+				<div>
+					<input  id="ballsNum" placeholder="Number of balls" type="number"name="ballsNum" min= "50" max="90" required="true" >
+				</div>
+				<label for="gameTime">Game duration</label>
+				<div>
+					<input  id="gameTime" placeholder="Duration game" type="number" name="gameTime" min= "60" required="true">
+				</div>
+				<label for="monstersNum">Number of monsters</label>
+				<div>
+					<input  id="monstersNum" placeholder="Number of monsters" type="number" name="monstersNum" min="1" max="4" required="true">
+				</div>
+				<br>	
+				<!-- choose game buttons -->
+				<div id="upKey">
+					<label for="monstersNum"> Game buttons:</label>
+					<br>
+					<select id="upButton">			
+					<option value="0">Select up key:</option>
+					<option value="ArrowUp">ArrowUp</option>
+					<option value="ArrowDown">ArrowDown</option>
+					<option value="ArrowRight">ArrowRight</option>
+					<option value="ArrowLeft">ArrowLeft</option>
+					<option value="KeyW">KeyW</option>
+					<option value="KeyA">KeyA</option>
+					<option value="KeyS">KeyS</option>
+					<option value="KeyD">KeyD</option>
+				</select>	
+				</div>	
+				<div id="downKey">
+					<select id="downButton">
+					<option value="0">Select Down key:</option>
+					<option value="ArrowUp">ArrowUp</option>
+					<option value="ArrowDown">ArrowDown</option>
+					<option value="ArrowRight">ArrowRight</option>
+					<option value="ArrowLeft">ArrowLeft</option>
+					<option value="KeyW">KeyW</option>
+					<option value="KeyA">KeyA</option>
+					<option value="KeyS">KeyS</option>
+					<option value="KeyD">KeyD</option>
+				</select>
+				</div>
+				<div id="rightKey">
+					<select id="rightButton">
+					<option value="0">Select right key:</option>
+					<option value="ArrowUp">ArrowUp</option>
+					<option value="ArrowDown">ArrowDown</option>
+					<option value="ArrowRight">ArrowRight</option>
+					<option value="ArrowLeft">ArrowLeft</option>
+					<option value="KeyW">KeyW</option>
+					<option value="KeyA">KeyA</option>
+					<option value="KeyS">KeyS</option>
+					<option value="KeyD">KeyD</option>
+				</select>
+				</div>	
+				<div id="leftKey">
+					<select id="leftButton">
+					<option value="0">Select left key:</option>
+					<option value="ArrowUp">ArrowUp</option>
+					<option value="ArrowDown">ArrowDown</option>
+					<option value="ArrowRight">ArrowRight</option>
+					<option value="ArrowLeft">ArrowLeft</option>
+					<option value="KeyW">KeyW</option>
+					<option value="KeyA">KeyA</option>
+					<option value="KeyS">KeyS</option>
+					<option value="KeyD">KeyD</option>
+				</select>
+				</div>
+				<br>
+					<!-- choose balls color -->
+					<label for="monstersNum">Balls colors:</label>
+					<div id="5pointsColor">
+						<select id="pointsColor5">
+						<option value="0">Select 5 points color:</option>
+						<option value="1">black</option>
+						<option value="2">red</option>
+						<option value="3">blue</option>
+					</select>
+					</div>
+					<div id="15pointsColor">
+						<select id="pointsColor15">
+						<option value="0">Select 15 points color:</option>
+						<option value="1">black</option>
+						<option value="2">red</option>
+						<option value="3">blue</option>
+					</select>
+					</div>
+					<div id="25pointsColor">
+						<select id="pointsColor25">
+						<option value="0">Select 25 points color:</option>
+						<option value="1">black</option>
+						<option value="2">red</option>
+						<option value="3">blue</option>
+					</select>
+					</div>
+				<br>
+				<br>
+				<div>
+					<input id="startGameButton" name="start" type="submit" value="send">
+					<button id="randomGameButton" name="random">random</button>
 				</div>
 				
-				<div id="Register" class="tabcontent" >
-					<br/>
-					<br/>
-					<br/>
-					<br/>
-				  <h3>Register</h3>
-				  <p>cccc</p>
+			</form>
+		</div>
+    </section>
 
-				</div>
-				
-				<div id="Login" class="tabcontent" >
-					<br/>
-					<br/>
-					<br/>
-					<br/>
-				  <h3>Username: </h3>
-				  <input id="userName" type="text">
-				  <h3>passward: </h3>      
-				  <input id="passward" type="text">
-					<br/>
-					<br/>
-				  <button onclick="loginFunction($('#userName').val(), $('#passward').val())"> Login </button>      
-				</div>
+    <!---------------- game section ----------------->
+    <section id="gameSection">
+        <div class="row container">
+            <div id="gameInfo" class="col-sm-4">
+                <h4>User:</h4>
+                <h5 id="userName"></h5>
+                <h5>SCORE:</h5>
+                <input id="lblScore" type="text"/>
+                <h4>TIME:</h4>
+                <input id="lblTime" type="text"/>
+                <h4>Lives</h4>
+                <h5 id="lives"></h5>
+                <button onclick="newGame();return true;" class="btn btn-primary">New Game</button>
+            </div>
+            <div id="game" class="col-sm-8">
+                <canvas id="canvas" height="600" width="600"></canvas>
+            </div>
+        </div>
+    </section>
 
-				<div id="About" class="tabcontent" >
-					<br/>
-					<br/>
-					<br/>
-					<br/>
-					<h3>About</h3>
-				  </div>
+</div>
 
-				  <div id="Game" class="tabcontent" style="height: 500px;">
-					<h3>Game</h3>
-  				<!----- game body ----->
-				
-				 <br/>
-			 	 <br/>
-			 	  SCORE:
-			 	 <input id="lblScore" type="text" />
-			 	 <br/>
-			 	 <br/>
-				  TIME:
-			  	<input id="lblTime" type="text" />
-			  	<br/>
-			  	<canvas id="canvas" height="500" width="500" class="canvas" ></canvas>
-	  
-				  </div>
-			</nav>
-			</div>	 
-		<!----- footer ----->
-		<footer>
-			<div >© 2020 Dana Sror & Yarin Hayun ©&nbsp;<br><a href="mailto:danayevd@post.bgu.ac.il?subject=Pacman">danayevd@post.bgu.ac.il  </a>&nbsp;</div>
-		<div><a href="mailto:yarinbo@post.bgu.ac.il?subject=Pacman">yarinbo@post.bgu.ac.il</a>&nbsp;</div>
-		</footer>
 
-		<script>
-			let users = [];
+<br>
+<!----- footer ----->
+<footer>
+    <div >© 2020 Dana Sror & Yarin Hayun ©&nbsp;<br><a href="mailto:danayevd@post.bgu.ac.il?subject=Pacman">danayevd@post.bgu.ac.il  </a>&nbsp;</div>
+<div><a href="mailto:yarinbo@post.bgu.ac.il?subject=Pacman">yarinbo@post.bgu.ac.il</a>&nbsp;</div>
+</footer>
 
-			function openPage(pageName,elmnt) {
-			  var i, tabcontent, tablinks;
-			  tabcontent = document.getElementsByClassName("tabcontent");
-			  for (i = 0; i < tabcontent.length; i++) {
-				tabcontent[i].style.display = "none";
-			  }
-			  tablinks = document.getElementsByClassName("tablink");
-			  for (i = 0; i < tablinks.length; i++) {
-				tablinks[i].style.backgroundColor = "";
-			  }
-			  document.getElementById(pageName).style.display = "block";
-			}
-			// Get the element with id="defaultOpen" and click on it
-			document.getElementById("defaultOpen").click();
-					
-			function PageLoaded() {
-				let testUser = new User('p', 'p', 'default', 'default', 'a', 'a');
-				users.push(testUser);
-			}
-	
-			function User(userName, password, firstName, lastName, email, birthDate) {
-				this.userName = userName;
-				this.password = password;
-				this.firstName = firstName;
-				this.lastName = lastName;
-				this.email = email;
-				this.birthDate = birthDate;
-			}	
-	
-			function loginFunction(userName, password) {
-				for (let i = 0; i < users.length; i++) {
-					if (userName === users[i].userName && password === users[i].password) {
-						alert("Login successful");
-						clearData();
-						break;
-					}
-				}
-				alert("one or more of your details incorrect");
-			}
-	
-			function registerFunction(userName, password, firstName, lastName, email, birthDate) {
-				let newUser = new User(userName, password, firstName, lastName, email, birthDate);
-				users.push(newUser);
-				clearData();
-			}
-			
-			function clearData(){
-				password.value = "";
-				userName.value= "";
-			}
-		
-		</script>
-		
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+<script src="https://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/about.js"></script>
+<script type="text/javascript" src="js/navbar.js"></script>
+<script type="text/javascript" src="js/pre-game.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
 </body>
-
 </html>
