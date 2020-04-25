@@ -1,4 +1,5 @@
 $(document).ready(function (e) {
+
     $("#startGameButton").submit(function (e) { 
          e.preventDefault();
          const Up = $("#upButton :selected").text();
@@ -12,7 +13,8 @@ $(document).ready(function (e) {
          const timeGame = document.getElementById("gameTime").value;
          const monstersNumber= document.getElementById("monstersNum").value;     
          openPage("game");
-         startGame(Up,Down,Right ,Left ,pointsColor5,pointsColor15, pointsColor25,ballNumber,timeGame,monstersNumber);   
+         Start();
+       //  startGame(Up,Down,Right ,Left ,pointsColor5,pointsColor15, pointsColor25,ballNumber,timeGame,monstersNumber);   
     });
 
     //random game
@@ -23,7 +25,9 @@ $(document).ready(function (e) {
         const color15 = colors[Math.floor(Math.random() * colors.length)];
         const color25 = colors[Math.floor(Math.random() * colors.length)];
         openPage("game");
-        startGame('ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft', color5, color15, color25,
-                  Math.floor(Math.random() * (90)) + 50, Math.floor(Math.random() * (10000)) + 60, (Math.floor(Math.random() * (4)) + 1).toString());
+        Start();
+        // startGame('ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft', color5, color15, color25,
+        //           Math.floor(Math.random() * (90)) + 50, Math.floor(Math.random() * (10000)) + 60, (Math.floor(Math.random() * (4)) + 1).toString());     
     });
+
 });
