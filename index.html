@@ -228,46 +228,29 @@
 		</div>
     </section>
 
-    <!---------------- game section ----------------->
-   <!-- <section id="gameSection">
-	  <div id="gameInfo">
-		<div id="score">
-			<label for="lblScore">SCORE:</label>
-			<input id="lblScore" type="text" />
-		</div>
-		<div id="time">
-			<label for="lblTime">TIME:</label>
-			<input id="lblTime" type="text" />
-		</div>
-		<div id="game">
-			<button onclick="newGame()" class="btn btn-primary">New Game</button>
-			<canvas id="canvas" height="600" width="600"></canvas>
-		</div>
-	  </div>
-	</section>  -->
-
-
+ <!--------------------- Game -------------------->
 	<section id="gameSection">
-		
-        <div class="row container">
-            <div id="gameInfo" class="col-sm-4" style="top:-100px">
-                <h4>User:</h4>
-                <h5 id="userName"></h5>
-                <h5>SCORE:</h5>
-                <input id="lblScore" type="text"/>
-                <h4>TIME:</h4>
-                <input id="lblTime" type="text"/>
-                <h4>Lives</h4>
-                <h5 id="lives"></h5>
-                <button onclick="newGame()" class="button canvasButton">New Game</button>
-            </div>
-            <div id="game" class="col-sm-8">
-				<canvas id="canvas" height="600" width="600" style="top:70px" ></canvas>
+		<div id="GameCanves">
+			<div id="GameSettings" class="GameSettings">
+				<div id="score">
+					<label for="lblScore">SCORE:</label>
+					<input id="lblScore" type="text" />
+				</div>
+				<div id="time">
+					<label for="lblTime">TIME:</label>
+					<input id="lblTime" type="text" />
+				</div>
+				<div id="buttonDiv">
+                	<button onclick="newGame()" class="button canvasButton">New Game</button>
+				</div>
 			</div>
-			
-        </div>
-    </section>
+			<div id="game">
+				<canvas id="canvas" height="600" width="600"></canvas>
+			</div>
+		</div>
+	</section>
 <br>
+
 <!----- footer ----->
 <footer>
     <div >© 2020 Dana Sror & Yarin Hayun ©&nbsp;<br><a href="mailto:danayevd@post.bgu.ac.il?subject=Pacman">danayevd@post.bgu.ac.il  </a>&nbsp;</div>

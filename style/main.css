@@ -249,22 +249,25 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 /* *************canvas*************** */
-#canvas {
-	position: absolute;
-	width: 600px;
-	height: 400px;
-	left: 50%;
-	top: 50%;
-	margin-left: -300px; /* This is half the width */
-  margin-top: -200px; /* This is half the height */
-  border-style: dotted;
-  color: #f1f1f1;
+@media screen and (max-height: 768px){
+  #canvas{
+      position: absolute;
+      height: 55%;
+      width: 32%;
+      display: block;
+      margin-left: 35%;
+      margin-right: 25%;
+      top: 28%;  
+      border-style: dotted; 
+  }
+
+  .GameSettings{
+      top: 28%;    
+      margin: auto;
+      position: absolute;
+      color: azure;
+  }
+
+
+
 }
-
- #gameSection{
-  bottom: 0;
-  margin: auto;
-  position: absolute;
-  color: azure;
-} 
-
