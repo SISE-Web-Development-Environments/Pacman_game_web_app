@@ -23,7 +23,7 @@ function Start() {
 	for (var i = 0; i < 10; i++) { // i-col
 		board[i] = new Array(); // create another array in board[i], therefore is 2d array
 		//put walls in (i=3,j=3) and (i=3,j=4) and (i=3,j=5), (i=6,j=1) and (i=6,j=2)
-		for (var j = 0; j < 10; j++) { // row
+		for (var j = 0; j < 10; j++) { //j- row
 			if (
 				(i == 3 && j == 3) ||
 				(i == 3 && j == 4) ||
@@ -33,12 +33,13 @@ function Start() {
 			) {
                 board[i][j] = 4; // 4 represents a wall in the game 
 
-            // define food     
+            // define food + pacman    
 			} else {
 				var randomNum = Math.random();
-				if (randomNum <= (1.0 * food_remain) / cnt) { //if the percentage of food is greater than we set, so ew put 1
+				if (randomNum <= (1.0 * food_remain) / cnt) { //if the percentage of food is greater than we set, so we put 1
 					food_remain--;
-					board[i][j] = 1; // 1 represents food
+                    board[i][j] = 1; // 1 represents food
+                  
 				} else if (randomNum < (1.0 * (pacman_remain + food_remain)) / cnt) { //if pacman is not defined We'll place the pacman 
 					shape.i = i; //pacman's start location
 					shape.j = j;
@@ -121,7 +122,7 @@ function Draw() {
 			} else if (board[i][j] == 1) { // 1 represents the food
 				context.beginPath();
 				context.arc(center.x, center.y, 15, 0, 2 * Math.PI); // circle
-				context.fillStyle = "black"; //food's color
+				context.fillStyle = "red"; //food's color
 				context.fill();
 			} else if (board[i][j] == 4) { // 4 represents the wall
 				context.beginPath();

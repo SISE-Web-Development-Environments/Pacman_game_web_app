@@ -14,7 +14,7 @@ $(document).ready(function (e) {
          let monstersNumber= document.getElementById("monstersNum").value;     
          openPage("game");
          Start();
-       //  startGame(Up,Down,Right ,Left ,pointsColor5,pointsColor15, pointsColor25,ballNumber,timeGame,monstersNumber);   
+       //  start(Up,Down,Right ,Left ,pointsColor5,pointsColor15, pointsColor25,ballNumber,timeGame,monstersNumber);   
     });
 
     //random game
@@ -26,8 +26,8 @@ $(document).ready(function (e) {
         let color25 = colors[Math.floor(Math.random() * colors.length)];
         openPage("game");
         Start();
-        // startGame('ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft', color5, color15, color25,
-        //           Math.floor(Math.random() * (90)) + 50, Math.floor(Math.random() * (10000)) + 60, (Math.floor(Math.random() * (4)) + 1).toString());     
+        // start('ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft', color5, color15, color25,
+        //           Math.floor(Math.random() * (90)) + 50, Math.floor(Math.random() * (1000)) + 60, (Math.floor(Math.random() * (4)) + 1));     
     });
 
 });

@@ -51,41 +51,45 @@
     </section>
 
     <!------------ Registration section ------------->
-    <section id="registerSection" class="registrationForm">
+	 <section id="registerSection" class="registrationForm">
         <br/>
         <br/>
         <br/>
         <div id="Register" class="registrationForm">
-        <h3 style="font-size: 10mm;">Sign Up</h3>
-			<form  id="registrationForm" role="form"  action="" class="registrationForm">
+		<form id="registrationForm" role="form" action="/action_page.php">
+			<div class="container">
+			  <h1>Register</h1>
+			  <p>Please fill this form to create an account.</p>
+			  <hr>
 			  <p>
-				  <label>user name *</label>
-				  <input id="userNameR" type="text" name="username"  pattern="^[a-zA-Z]*$"  required="required" />
-			  </p>
-			  <p>
-				  <label>password *</label>
-				  <input id="passwordR" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required="required" />
-			  </p>   
-			  <p>
-				  <label>first name *</label>
-				  <input id="firstNameR" type="text" name="firstName"  pattern="^[a-zA-Z]*$" required="required"/>
-			  </p> 
-			  <p>
-				  <label>last name *</label>
-				  <input id="lastNameR" type="text" name="lastName" pattern="^[a-zA-Z]*$" required="required"/>
-			  </p> 
-			  <p>
-				  <label>email *</label>
-				  <input id="emailR" type="email" name="email" required="required" />
-			  </p>
-			  <p>
-				  <label>birthday</label>
-				  <input id="birthdayR" type="date" id="birthday" name="birthday" required="required"/>
-              </p>
-              <p>
-                <input id="registerSubmitButton"  type="submit" value="Submit" class="button button2">
-              </p>
-			</form>
+						<!-- <label>user name *</label> -->
+						<input id="userNameR" type="text" placeholder="Enter user name" name="username"  pattern="^[a-zA-Z]*$"  required="required" />
+						</p>
+						<p>
+							<!-- <label>password *</label> -->
+							<input id="passwordR" type="password" placeholder="Enter password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required="required" />
+						</p>   
+						<p>
+							<!-- <label>first name *</label> -->
+							<input id="firstNameR" type="text" placeholder="Enter first name" name="firstName"  pattern="^[a-zA-Z]*$" required="required"/>
+						</p> 
+						<p>
+							<!-- <label>last name *</label> -->
+							<input id="lastNameR" type="text" placeholder="Enter last name" name="lastName" pattern="^[a-zA-Z]*$" required="required"/>
+						</p> 
+						<p>
+							<!-- <label>email *</label> -->
+							<input id="emailR" type="email" placeholder="Enter email" name="email" required="required"   />
+						</p>
+						<p>
+							<!-- <label>birthday *</label> -->
+							<input id="birthdayR" type="date" placeholder="00/00/0000" id="birthday" name="birthday" required="required"/>
+						</p>
+						<p>
+						  <input id="registerSubmitButton"  type="submit" value="Submit" class="formButton formButton2">
+						</p>
+			</div>
+</form>		
         </div>
         <br/>
         <br/>
@@ -161,65 +165,37 @@
 				<br>	
 				<!-- choose game buttons -->
 				<div id="upKey">
-					<label for="monstersNum"> Game buttons:</label>
+					<label for="monstersNum">Select game buttons:</label>
 					<br>
 					<select id="upButton">			
-					<option value="0">Select up key:</option>
-					<option value="ArrowUp">ArrowUp</option>
-					<option value="ArrowDown">ArrowDown</option>
-					<option value="ArrowRight">ArrowRight</option>
-					<option value="ArrowLeft">ArrowLeft</option>
+					<option value="0">ArrowUp</option>				
 					<option value="KeyW">KeyW</option>
-					<option value="KeyA">KeyA</option>
-					<option value="KeyS">KeyS</option>
-					<option value="KeyD">KeyD</option>
 				</select>	
 				</div>	
 				<div id="downKey">
 					<select id="downButton">
-					<option value="0">Select Down key:</option>
-					<option value="ArrowUp">ArrowUp</option>
-					<option value="ArrowDown">ArrowDown</option>
-					<option value="ArrowRight">ArrowRight</option>
-					<option value="ArrowLeft">ArrowLeft</option>
-					<option value="KeyW">KeyW</option>
-					<option value="KeyA">KeyA</option>
+					<option value="0">ArrowDown</option>
 					<option value="KeyS">KeyS</option>
-					<option value="KeyD">KeyD</option>
 				</select>
 				</div>
 				<div id="rightKey">
 					<select id="rightButton">
-					<option value="0">Select right key:</option>
-					<option value="ArrowUp">ArrowUp</option>
-					<option value="ArrowDown">ArrowDown</option>
-					<option value="ArrowRight">ArrowRight</option>
-					<option value="ArrowLeft">ArrowLeft</option>
-					<option value="KeyW">KeyW</option>
-					<option value="KeyA">KeyA</option>
-					<option value="KeyS">KeyS</option>
+					<option value="0">ArrowRight</option>
 					<option value="KeyD">KeyD</option>
 				</select>
 				</div>	
 				<div id="leftKey">
 					<select id="leftButton">
-					<option value="0">Select left key:</option>
-					<option value="ArrowUp">ArrowUp</option>
-					<option value="ArrowDown">ArrowDown</option>
-					<option value="ArrowRight">ArrowRight</option>
-					<option value="ArrowLeft">ArrowLeft</option>
-					<option value="KeyW">KeyW</option>
+					<option value="0">ArrowLeft</option>
 					<option value="KeyA">KeyA</option>
-					<option value="KeyS">KeyS</option>
-					<option value="KeyD">KeyD</option>
 				</select>
 				</div>
 				<br>
 					<!-- choose balls color -->
-					<label for="monstersNum">Balls colors:</label>
+					<label for="monstersNum">Select balls colors:</label>
 					<div id="5pointsColor">
 						<select id="pointsColor5">
-						<option value="0">Select 5 points color:</option>
+						<option value="0"> 5 points color:</option>
 						<option value="1">black</option>
 						<option value="2">red</option>
 						<option value="3">blue</option>
@@ -227,7 +203,7 @@
 					</div>
 					<div id="15pointsColor">
 						<select id="pointsColor15">
-						<option value="0">Select 15 points color:</option>
+						<option value="0">15 points color:</option>
 						<option value="1">black</option>
 						<option value="2">red</option>
 						<option value="3">blue</option>
@@ -235,7 +211,7 @@
 					</div>
 					<div id="25pointsColor">
 						<select id="pointsColor25">
-						<option value="0">Select 25 points color:</option>
+						<option value="0"> 25 points color:</option>
 						<option value="1">black</option>
 						<option value="2">red</option>
 						<option value="3">blue</option>
@@ -253,9 +229,28 @@
     </section>
 
     <!---------------- game section ----------------->
-    <section id="gameSection">
+   <!-- <section id="gameSection">
+	  <div id="gameInfo">
+		<div id="score">
+			<label for="lblScore">SCORE:</label>
+			<input id="lblScore" type="text" />
+		</div>
+		<div id="time">
+			<label for="lblTime">TIME:</label>
+			<input id="lblTime" type="text" />
+		</div>
+		<div id="game">
+			<button onclick="newGame()" class="btn btn-primary">New Game</button>
+			<canvas id="canvas" height="600" width="600"></canvas>
+		</div>
+	  </div>
+	</section>  -->
+
+
+	<section id="gameSection">
+		
         <div class="row container">
-            <div id="gameInfo" class="col-sm-4">
+            <div id="gameInfo" class="col-sm-4" style="top:-100px">
                 <h4>User:</h4>
                 <h5 id="userName"></h5>
                 <h5>SCORE:</h5>
@@ -264,16 +259,14 @@
                 <input id="lblTime" type="text"/>
                 <h4>Lives</h4>
                 <h5 id="lives"></h5>
-                <button onclick="newGame();return true;" class="btn btn-primary">New Game</button>
+                <button onclick="newGame()" class="button canvasButton">New Game</button>
             </div>
             <div id="game" class="col-sm-8">
-                <canvas id="canvas" height="600" width="600"></canvas>
-            </div>
+				<canvas id="canvas" height="600" width="600" style="top:70px" ></canvas>
+			</div>
+			
         </div>
     </section>
-
-</div>
-
 <br>
 <!----- footer ----->
 <footer>
@@ -292,7 +285,6 @@
 <script type="text/javascript" src="js/register.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
 <script type="text/javascript" src="js/about.js"></script>
-<script type="text/javascript" src="js/navbar.js"></script>
 <script type="text/javascript" src="js/pre-game.js"></script>
 <script type="text/javascript" src="js/game.js"></script>
 </body>
