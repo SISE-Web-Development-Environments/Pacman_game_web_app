@@ -13,12 +13,19 @@ In order to play you first need to register.
 Afterwards you can log in with your user name and password.
 
 Game  Instructions :
+
 •	Your goal is to eat as many candies as possible so that your score increases.
+
 •	If you have gained more than 100 points you have won.
+
 •	If the monsters eat you 5 time you lose.
+
 •	You have 5 strikes throughout the game. If one of the monsters eat you , your score is down in 10 points. In addition to each monster type there is a different score download as listed below  in bonus part.
+
 •	You can buy extra time if you eat the watch.
+
 •	You can earn 50 extra points if you eat the cherry.
+
 
  Game functionality :
 -	SetUserSettings – set first settings for each label
