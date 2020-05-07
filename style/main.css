@@ -1,6 +1,3 @@
-
-@import "about.css";
-
 html {
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -21,6 +18,7 @@ body {
     padding:0; 
     margin:0;
     position:relative;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -48,7 +46,7 @@ article{
 
 section {
     display: none;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .activeSection {
@@ -75,7 +73,9 @@ section {
 
  .registrationForm{
      color: rgb(255, 255, 255);
-
+}
+.registrationForm{
+  color: rgb(255, 255, 255);
 }
 input{
   color: #000;
@@ -130,6 +130,10 @@ input{
 .formButton2:hover {
   box-shadow: 0 12px 16px 0 rgba(253, 250, 250, 0.24),0 17px 50px 0 rgba(255, 255, 255, 0.19);
 }
+.formButton3:hover {
+  box-shadow: 0 12px 16px 0 rgba(253, 250, 250, 0.24),0 17px 50px 0 rgba(255, 255, 255, 0.19);
+  font-size: 60px;
+}
 
 .canvasButton{
   background-color: #ff626d; 
@@ -167,7 +171,7 @@ input{
   }
   /*--------------------------end header------------------------ */
 
-  @media  (min-width: 767px) {
+  @media  (min-width: 768px) {
   /*--------------------------start menu------------------------ */
   ul {
     list-style-type: none;
@@ -208,7 +212,7 @@ input{
     background-color:#222489;
     color: rgb(255, 255, 255);
   }
-  #welcomeClick{
+  #welcome{
     float: left;
     background-color: rgb(242, 255, 55);
     color: rgb(0, 0, 0);
@@ -247,25 +251,145 @@ input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
+  .leftSettings{
+   padding-top: 5%;
+    float:left; 
+    width: 25%;
+    height: 25%;
+    color:azure;
+}
 
 /* *************canvas*************** */
-@media screen and (min-width: 768px){
+@media screen and (min-height: 768px) and (min-width: 1366px){
   #canvas{
-      position: absolute;
+      position: absolute; 
+      display: block;
+      top: 28%;  
       height: 55%;
       width: 32%;
-      display: block;
       margin-left: 35%;
       margin-right: 25%;
-      top: 28%;  
-      border-style: dotted; 
   }
 
-  .GameSettings{
+/* 
+  .leftSettings{
       top: 28%;    
       margin: auto;
       position: absolute;
       color: azure;
-  }
+  } */
   
+}
+
+#lbl5ballColor{
+  width: 10%;
+  /* background-color: #00CED1; */
+  border: 2px solid #ffffff;
+/* border: none; */
+  color: white;
+  padding: 5px 5px;
+  /* text-align: center; */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+#lbl15ballColor{
+  width: 10%;
+  /* background-color: #FF69B4; */
+  border: 2px solid #ffffff;
+  /* border: none; */
+  color: white;
+  padding: 5px 5px;
+  /* text-align: center; */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+#lbl25ballColor{
+  width: 10%;
+  /* background-color: #00008B; */
+  border: 2px solid #ffffff;
+  /* border: none; */
+  color: white;
+  padding: 5px 5px;
+  /* text-align: center; */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.inputGame{
+  text-align: center;
+  padding: 5px 15px;
+  margin: 4px 2px;
+}
+#Settings{
+  color: rgb(255, 255, 255);
+}
+/* ******************modal doalog***************** */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  color: #000;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* *******************end modal dialoge******************* */
+
+table {
+  /* border: 2px solid rgb(0, 0, 0); */
+  /* border-collapse: collapse; */
+  border: none;
+  width: 100%;
+  
+}
+th{
+  border: none;
+
+}
+td{
+  /* border: 2px solid rgb(255, 255, 255);
+  border-collapse: collapse; */
+  /* height: 70%; */
+  border: none;
 }

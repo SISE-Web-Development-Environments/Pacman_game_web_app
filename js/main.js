@@ -1,22 +1,27 @@
-var users = [{userName: "p", userPassword: "p"}];
-var currentUser = {userName: "p", userPassword: "p"};
+var usersArr = [[ "p", "p"]];
+var player=[ "p", "p"];
 
-function clickPage(itemDataOption) {
-   
-    openPage(itemDataOption.getAttribute("data-option"));
-
+function clickPage(choosenPage) {
+    if(choosenPage=="welcome")
+    openPage("welcome");
+    if(choosenPage=="register")
+    openPage("register");
+    if(choosenPage=="login")
+    openPage("login");
 }
 
-
-
 function openPage(pageScriptName) {
+    if(pageScriptName != "game"  ){
+        _sound.pause();
+    }
 
     //remove active class
-    const activatedSection = document.getElementsByClassName("activeSection");
-    activatedSection[0].classList.remove("activeSection");
+    const allSectionsActivated = document.getElementsByClassName("activeSection");
+    allSectionsActivated[0].classList.remove("activeSection");
 
     //add active class
     const newActivatedSection = document.getElementById("main").querySelector(`#${pageScriptName}Section`);
     newActivatedSection.classList.add("activeSection");
 
 }
+
