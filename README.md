@@ -2,7 +2,7 @@
  
 #Pacmen game
 
-url : https://sise-web-development-environments.github.io/assignment2-dana-yarin/
+url :https://sise-web-development-environments.github.io/assignment2-dana-yarin/
 
 Presenters: Yarin Hayun 311326359 & Dana Sror 204591424
 
