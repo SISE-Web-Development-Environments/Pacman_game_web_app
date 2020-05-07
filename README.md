@@ -1,9 +1,13 @@
 # Assignment2
  
 #Pacmen game
+
 url : https://sise-web-development-environments.github.io/assignment2-dana-yarin/
+
 Presenters: Yarin Hayun 311326359 & Dana Sror 204591424
+
 ______________________________________________________________________
+
 
 In order to play you first need to register.	
 Afterwards you can log in with your user name and password.
@@ -33,6 +37,7 @@ Game  Instructions :
 -	drawMonsters, drawChery, drawGameOver – drawing functions
 
 Bonus part:
+
 •	The player can buy extra time if he eat the watch.
 •	For each clash with the monster there is a different score download:
 -	Res monster – 20 points
