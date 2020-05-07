@@ -677,5 +677,5 @@ function drawMonsters(){
 	Img.src =_chery.pic;
 	context.drawImage(Img, center.x - 15, center.y - 15, 30, 30); //(image, dx, dy, dWidth, dHeight);
 }
-
+//
 //************************************************************************************************************************** */
