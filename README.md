@@ -48,7 +48,7 @@ Bonus part:
 •	The player can buy extra time if he eat the watch.
 
 •	For each clash with the monster there is a different score download:
--	Res monster – 20 points
+-	Red monster – 20 points
 -	Pink monster -15 points
 -	Blue monster – 10 points
 -	Orange monster – 5 points
